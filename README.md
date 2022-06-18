@@ -31,7 +31,7 @@ splitfolders.ratio("Male and Female face dataset", output="output", seed=1337, r
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mping
-img = mping.imread('steve.jpg')
+img = mping.imread('iu.jpg')
 plt.imshow(img)
 
 import tensorflow as tf
@@ -50,7 +50,7 @@ test = train_datagen.flow_from_directory("output/val/",target_size=(224,224),see
 
 from tensorflow.keras.preprocessing import image
 
-test_image = image.load_img('steve.jpg', target_size=(224,224))
+test_image = image.load_img('iu.jpg', target_size=(224,224))
 test_image = image.img_to_array(test_image)
 test_image = tf.expand_dims(test_image,axis=0)
 test_image = test_image/255.
@@ -83,9 +83,13 @@ pd.DataFrame(history.history).plot()
 
 
 ## OUTPUT:
+![Capture77](https://user-images.githubusercontent.com/75235022/174449843-13e22959-b97d-4b12-8b20-820f972ab5be.PNG)
+![Capture78](https://user-images.githubusercontent.com/75235022/174449846-e30391c6-1d32-4a06-b380-298cfb3b15a2.PNG)
+![Capture79](https://user-images.githubusercontent.com/75235022/174449861-1c4ff489-b526-4ae7-a3d3-7afb75c2d1e9.PNG)
+![Capture80](https://user-images.githubusercontent.com/75235022/174449865-974daf3e-8163-4da2-9fcf-9057ab9e46b1.PNG)
 
 
-DEMO VIDEO YOUTUBE LINK:
+DEMO VIDEO YOUTUBE LINK:https://youtu.be/_v5KOinmScA
 
 ## RESULT: 
 The B0 Efficientnet NN model has been created for gender classification and has sucessfully predicted gender of the input images.
